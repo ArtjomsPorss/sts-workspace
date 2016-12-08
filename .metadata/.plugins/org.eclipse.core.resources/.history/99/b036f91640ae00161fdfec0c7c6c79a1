@@ -1,0 +1,2 @@
+#standard port for production environment
+server.port=80

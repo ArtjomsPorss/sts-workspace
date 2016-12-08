@@ -1,0 +1,8 @@
+package com.basics.repository;
+
+public class HibernateCustomerRepositoryImpl {
+	
+	public List<Customer> findAll(){
+		List<Customer> customers = new ArrayList<>();
+	}
+}

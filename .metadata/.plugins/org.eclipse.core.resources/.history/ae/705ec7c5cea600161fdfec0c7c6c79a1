@@ -1,0 +1,6 @@
+package com.boot.controller;
+
+@RestController
+public class ShipWreckController {
+
+}

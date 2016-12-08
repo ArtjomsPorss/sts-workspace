@@ -1,0 +1,5 @@
+package com.basics.model;
+
+public class Customer {
+
+}

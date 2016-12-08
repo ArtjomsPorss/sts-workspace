@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="main/java/|test/java/|main/resources/css/|main/resources/images/|main/resources/js/|main/resources/lib/angular/css/|main/resources/lib/angular/js/|main/resources/lib/assets/js/|main/resources/lib/bootstrap/css/|main/resources/lib/bootstrap/fonts/|main/resources/lib/bootstrap/js/|main/resources/lib/html5shiv/|main/resources/lib/jquery/|main/resources/lib/require/|main/resources/lib/respond/|main/resources/views/|main/resources/|main/resources/resources/|main/resources/resources/css/|main/resources/resources/images/|main/resources/resources/js/|main/resources/resources/lib/angular/css/|main/resources/resources/lib/angular/js/|main/resources/resources/lib/assets/js/|main/resources/resources/lib/bootstrap/css/|main/resources/resources/lib/bootstrap/fonts/|main/resources/resources/lib/bootstrap/js/|main/resources/resources/lib/html5shiv/|main/resources/resources/lib/jquery/|main/resources/resources/lib/require/|main/resources/resources/lib/respond/|main/resources/resources/views/|main/public/|test/|main/" kind="src" path="src"/>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

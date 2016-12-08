@@ -1,0 +1,24 @@
+package com.boot;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+
+import com.boot.controller.ShipWreckController;
+import com.boot.model.Shipwreck;
+import com.boot.repository.ShipwreckRepository;
+
+public class ShipwreckControllerTest {
+	@InjectMocks private ShipWreckController swc;
+	@Mock private ShipwreckRepository swRepository;
+	
+	@Before public void init(){ MockitoAnnotations.initMocks(this); }
+	
+	@Test
+	public void testShipwreckGet(){
+		Shipwreck sw = swc.get(1L);
+		assertEquals(1l, sw.getId().longValue());
+	}
+}

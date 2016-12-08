@@ -1,0 +1,12 @@
+package com.basics.service;
+
+import com.basics.repository.CustomerRepository;
+import com.basics.repository.HibernateCustomerRepositoryImpl;
+
+public class CustomerServiceImpl {
+	private CustomerRepository customerRepository = new HibernateCustomerRepositoryImpl();
+	
+	public LIst<Customer> findAll(){
+		return customerRepository.findAll();
+	}
+}

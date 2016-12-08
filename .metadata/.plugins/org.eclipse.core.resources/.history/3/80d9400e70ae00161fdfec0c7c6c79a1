@@ -1,0 +1,4 @@
+#add to run configurations-Vm arguments and run as that configuration to use this application.properties
+#-Dspring.profiles.active=test
+
+server.port=9090

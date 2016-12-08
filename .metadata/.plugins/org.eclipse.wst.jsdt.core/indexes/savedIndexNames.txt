@@ -1,0 +1,6 @@
+INDEX VERSION 1.3+C:\Users\porssa\Documents\WEBDEV_STUDY\workspace-sts\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1193960710.index
+2959134613.index
+1107384241.index
+2441015366.index
+1164043271.index

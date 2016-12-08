@@ -1,0 +1,17 @@
+package com.boot;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+import com.boot.controller.ShipWreckController;
+import com.boot.model.Shipwreck;
+
+public class ShipwreckControllerTest {
+	@Test
+	public void testShipwreckGet(){
+		ShipWreckController swc = new ShipWreckController();
+		Shipwreck sw = swc.get(1L);
+		assertEquals(1l, sw.getId().longValue());
+	}
+}

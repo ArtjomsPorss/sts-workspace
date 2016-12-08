@@ -1,0 +1,10 @@
+package com.perspectivememories.controller;
+
+import java.util.HashMap;
+
+import com.perspectivememories.model.Memory;
+
+public class MemoryStub {
+	private static HashMap<Long, Memory> memories = new HashMap<>();
+
+}

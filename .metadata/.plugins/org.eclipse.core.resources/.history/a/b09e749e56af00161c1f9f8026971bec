@@ -1,0 +1,41 @@
+package com.boot;
+
+import java.io.IOError;
+import java.io.IOException;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.boot.test.TestRestTemplate;
+import org.springframework.boot.test.WebIntegrationTest;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.web.client.RestTemplate;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.JsonNode;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringApplicationConfiguration(App.class)
+@WebIntegrationTest
+public class ShipWreckControllerWebIntegrationTest {
+	@Test
+	public void testListAll() throws IOException {
+		// RestTemplates is how APIs can be called programmatically
+		RestTemplate restTemplate = new TestRestTemplate();
+		// Move URL to configuration file and point it to test environment rather than test environment
+		ResponseEntity<String> response = restTemplate.getForEntity("http://localhost:8080/api/v1/shipwrecks", String.class);
+		// Test for 200 OK to be received back with response. Otherwise fail immediately.
+		assertThat( response.getStatusCode() , equalTo( HttpStatus.OK ) );
+		// Get the JSON
+		ObjectMapper objectMapper = new ObjectMapper();
+		JsonNode responseJson = objectMapper.readTree( response.getBody() );
+		// Perform some assertions on Json to make sure it is in a right state
+		assertThat( responseJson.isMissingNode() , is(false) );
+		assertThat( responseJson.toString() , equalTo("[]") );	//no shiprecks, json is empt 
+	}
+}

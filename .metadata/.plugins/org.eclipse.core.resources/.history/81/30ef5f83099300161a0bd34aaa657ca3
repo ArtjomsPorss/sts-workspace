@@ -1,0 +1,15 @@
+package repository;
+
+import model.Customer;
+
+public class HibernateCustomerRepositoryImpl {
+	
+	public List<Customer> findAll() {
+		List<Customer> customers = new ArrayList<>();
+		
+		Customer customer = new Customer();
+		customer.setFirstName("Art");
+		customer.setLastName("Porsh");
+	}
+
+}

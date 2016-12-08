@@ -1,0 +1,5 @@
+package com.basics.repository;
+
+public class HibernateCustomerRepositoryImpl {
+
+}

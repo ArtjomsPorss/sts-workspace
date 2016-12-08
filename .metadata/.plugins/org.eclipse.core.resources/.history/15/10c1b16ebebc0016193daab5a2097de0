@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="customerRepositoryBean" class="com.basics.repository.HibernateCustomerRepositoryImpl" />
+	
+	<!-- inject field using setter -->
+	<!-- 
+	<bean name="customerService" class="com.basics.service.CustomerServiceImpl">	
+		<property name="customerRepository" ref="customerRepositoryBean"></property>  
+	</bean>
+	-->
+	
+	<!-- inject field using constructor -->
+	<!-- 
+	<bean name="customerService" class="com.basics.service.CustomerServiceImpl">	
+		<constructor-arg index="0" ref="customerRepositoryBean"/>
+	</bean>
+	 -->
+	 
+	 <!-- autowire field using constructor -->
+	<bean name="customerService" class="com.basics.service.CustomerServiceImpl" autowire="constructor">	
+	</bean>
+	
+</beans>
+

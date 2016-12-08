@@ -1,0 +1,6 @@
+package com.perspectivememories.controller;
+
+@RestController
+public class HomeController {
+
+}

@@ -1,0 +1,5 @@
+package com.perspectivememories.controller;
+
+public class EntryRestController {
+
+}

@@ -1,0 +1,18 @@
+package com.perspectivememories.controller;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.perspectivememories.model.Memory;
+
+@RestController
+@RequestMapping("api/v1/")
+public class EntryRestController {
+	@RequestMapping(value="shipwrecks", method = RequestMethod.GET)
+	public List<Memory> list() {
+		MemoryStub.list();
+	}
+}

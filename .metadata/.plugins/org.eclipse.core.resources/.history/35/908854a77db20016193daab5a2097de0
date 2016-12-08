@@ -1,0 +1,6 @@
+package com.boot2.controller;
+
+@RestController
+public class HomeController {
+
+}

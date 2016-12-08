@@ -1,0 +1,26 @@
+package com.perspectivememories.controller;
+
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.HashMap;
+
+import com.perspectivememories.model.Memory;
+
+public class MemoryStub {
+	private static HashMap<Long, Memory> memories = new HashMap<>();
+	private static long indIndex = 3L;
+	
+	//populate static memories
+	static {
+		Memory a = new Memory(LocalDateTime.now(), 101L, 1L, "My First Message");
+		memories.put(1L, a);
+		Memory b = new Memory(LocalDateTime.now(), 102L, 2L, "My Second Message");
+		memories.put(2L, b);
+		Memory c = new Memory(LocalDateTime.now(), 103L, 3L, "My Third Message");
+		memories.put(3L, c);
+	}
+	
+	public static List<Memory> list(){
+		
+	}
+}

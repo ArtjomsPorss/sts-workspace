@@ -1,0 +1,2 @@
+logging.level.org.springframework.web=DEBUG
+#logging level for package springframework.web to DEBUG output

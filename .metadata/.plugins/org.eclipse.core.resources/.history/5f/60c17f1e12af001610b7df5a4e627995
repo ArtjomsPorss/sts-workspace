@@ -1,0 +1,13 @@
+package com.boot;
+
+import junit.framework.Test;
+
+
+public class AppTest {
+	
+	@Test
+    public void testApp()
+    {
+        assertTrue( true );
+    }
+}

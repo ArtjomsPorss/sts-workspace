@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean name="customerRepositoryBean" class="com.basics.repository.HibernateCustomerRepositoryImpl" />
+	
+	<!-- inject field using setter -->
+	<!-- 
+	<bean name="customerService" class="com.basics.service.CustomerServiceImpl">	
+		<property name="customerRepository" ref="customerRepositoryBean"></property>  
+	</bean>
+	-->
+	
+	<!-- inject field using constructor -->
+	<!-- 
+	<bean name="customerService" class="com.basics.service.CustomerServiceImpl">	
+		<constructor-arg index="0" ref="customerRepositoryBean"/>
+	</bean>
+	 -->
+	 
+	 <!-- autowire field using constructor -->
+	 <!-- 
+	<bean name="customerService" class="com.basics.service.CustomerServiceImpl" autowire="constructor">	
+	</bean>
+	-->
+
+	<!-- by type and by name - only 1 bean to set can be declared in xml, if more will crash -->
+	<!-- autowire - searches for beans that are of compatible type with the setters of this class, then injects them -->
+	<!-- 	
+	<bean name="customerService" class="com.basics.service.CustomerServiceImpl" autowire="byType">	
+	</bean>
+	 -->
+	
+	<!-- autowire - searches for a setter that takes in this type -->	
+	<bean name="customerService" class="com.basics.service.CustomerServiceImpl" autowire="byType">	
+	</bean>
+	
+</beans>
+
