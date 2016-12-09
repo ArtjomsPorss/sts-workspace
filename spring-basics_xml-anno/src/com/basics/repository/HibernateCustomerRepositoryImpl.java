@@ -2,9 +2,10 @@ package com.basics.repository;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import org.springframework.stereotype.Repository;
 import com.basics.model.Customer;
 
+@Repository("customerRepository") //name the same as the implemented interface
 public class HibernateCustomerRepositoryImpl implements CustomerRepository {
 	
 	/* (non-Javadoc)

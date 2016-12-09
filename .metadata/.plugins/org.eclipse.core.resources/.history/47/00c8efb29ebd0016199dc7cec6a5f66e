@@ -1,0 +1,28 @@
+package com.basics.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.basics.model.Customer;
+import com.basics.repository.CustomerRepository;
+
+@Service("customerService")	//name same as implemented interface
+public class CustomerServiceImpl implements CustomerService {
+	
+	/**
+	 * this annotation takes HibernateCustomerRepositoryImpl instance(annotated as custoemrRepository)
+	 * and into this member variable
+	 */
+	@Autowired
+	private CustomerRepository customerRepository;
+	
+	/* (non-Javadoc)
+	 * @see com.basics.service.CustomerService#findAll()
+	 */
+	@Override
+	public List<Customer> findAll(){
+		return customerRepository.findAll();	
+	}
+}

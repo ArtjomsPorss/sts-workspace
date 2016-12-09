@@ -1,7 +1,0 @@
-#logging level for package springframework.web to DEBUG output
-logging.level.org.springframework.web=DEBUG
-#changing server ports
-server.port=8080
-
-spring.h2.console.enabled=TRUE
-spring.h2.console.path=/h2
